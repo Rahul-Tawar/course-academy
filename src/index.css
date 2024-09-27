@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom CSS for 3D Slider */
+.item {
+    transition: transform 0.5s ease, z-index 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
+    will-change: transform, z-index, opacity, filter;
+  }
+  
