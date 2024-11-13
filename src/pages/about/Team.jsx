@@ -52,19 +52,19 @@ const Team = () => {
     },
     {
         _name: "Aakash Chauhan",
-        role: "DMI Teacher and Content Manager",
+        role: "Also a Content Manager",
         contact: "",
         image: "./role-images/Aakash.jpg"
     },
     {
         _name: "Riya Nandani",
-        role: "DMI Teacher & Group Moderator",
+        role: "Also a Group Moderator",
         contact: "",
         image: "./role-images/Riya.jpg" 
     },
     {
         _name: "Abhivats Bisht",
-        role: "DMI Teacher & Group Moderator",
+        role: "Also a Group Moderator",
         contact: "",
         image: "./role-images/Abhivats.jpg"
     },
@@ -112,7 +112,7 @@ const backendArray = profile.slice(11, 14)
           image={profile.image}
           name={profile._name}
           role={profile.role}
-          className="flex-row"
+          className=""
         />
       ))}
 
@@ -174,59 +174,19 @@ const backendArray = profile.slice(11, 14)
 
 function ProfileCard({ image, name, role, contact }) {
 
-  const [isExpanded, setIsExpanded] = useState(false);
-  const toggleExpand = () => setIsExpanded(!isExpanded);
+  
 
-  const CompactCard = () => (
-    <div className="flex flex-col items-center">
-    <img src={image} alt={`${name}'s profile`} className="w-20 rounded-full h-20" />
-    <h2 className="font-oswald font-bold mt-1 text-center">{name}</h2>
+  return(
+    <div className="flex flex-col items-center pb-8">
+    <img src={image} alt={`${name}'s profile`} className="w-20 rounded-full h-20 md:w-40 md:h-40" />
+    <h2 className="font-oswald font-bold mt-1 text-center md:text-xl">{name}</h2>
     <p className="text-gray-600 text-center">{role}</p>
     {contact && <p className="text-gray-600 text-center">{contact}</p>}
     <div>
-        <button className="pb-5  flex flex-row"
-        onClick={toggleExpand}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 25 25"
-          className="w-6 h-6 fill-current text-[#f8b31d]"
-        >
-          <path
-            d="M17.5 5.999l-.707.707 5.293 5.293H1v1h21.086l-5.294 5.295.707.707L24 12.499l-6.5-6.5z"
-            data-name="Right"
-          />
-      </svg>  
-        </button>  
     </div>
   </div>
   )
-  const ExpandedCard = () => (
-  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 overflow-hidden ">
-    <div className="bg-[#f8b31d] w-full max-w-2xl relative p-6 h-screen">
-      <button
-        className="absolute top-2 right-2 bg-transparent border-none cursor-pointer"
-        onClick={toggleExpand}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
-      <div className="justify-center items-center text-center translate-y-20">
-        <div className="w-[200px] h-[200px] mx-auto rounded-full overflow-hidden border-8 border-white">
-          <img src={image} alt={name} className="w-full h-full object-cover rounded-full" />
-        </div>
-        <h2 className="mt-4 text-2xl font-bold font-oswald">{name}</h2>
-        <p className="text-gray-600">{role}</p>
-      </div>
-      <div className="mt-20 justify-center align-center">
-        <p className="text-center">{contact}</p>
-        {/* Add more details here if needed */}
-      </div>
-    </div>
-  </div>
-);
 
-return isExpanded ? <ExpandedCard /> : <CompactCard />;
 }
 
 export default Team;

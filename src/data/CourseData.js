@@ -2,10 +2,11 @@ const CourseData = [
     {
         id: 1,
         title: "Commission Work Masterclass",
-        Description: "Unlock your artistic potential! Learn to commission artwork, monetize skills, and     attract international clients with our exclusive masterclass by award-winning artist Reyanshh Rahul.",
+        Description: "Unlock your artistic potential! Learn to commission artwork, monetize skills, and attract international clients with our exclusive masterclass by award-winning artist Reyanshh Rahul.",
+        desc_small:"Master commission art, monetize skills, attract clients—exclusive Reyanshh Rahul masterclass",
         slug: "commission-work-masterclass",
         videoURL: "",
-        price: "2,750",
+        price: "₹2,750",
         WhatYouWillLearn: [
             "Complete Guide to Commission Work",
             "Strategies for Online Commission Work",
@@ -41,9 +42,10 @@ const CourseData = [
         id: 2,
         title: "Drawing Mastery Training",
         Description: "Unlock your artistic potential with our International Art Training! This comprehensive course, led by professional artist Reyanshh Rahul, focuses on drawing skills from basic to advanced levels. Learn eye training, human figure, portrait drawing, landscapes, and art principles. Ideal for painters, art teachers, animators, and more. Enjoy HD images, private community support, and 1-year access. Avail special 72% discount till Sep 10, 2024. Enroll today for step-by-step guidance, practical exercises, and SEO-friendly learning",
+        desc_small:"International Art Training: Master drawing skills—eye training, portraits, landscapes, more!",
         slug: "drawing-mastery-training",
         videoURL: "",
-        price: "25,800",
+        price: "₹25,800",
         WhatYouWillLearn: [
             "Comprehensive Lessons on Improving Your Art Skills",
             "Step-by-Step Guide to Professional Drawing Techniques",
@@ -117,6 +119,7 @@ const CourseData = [
         id: 3,
         title: "The Transparency Training",
         Description: "Learn the Art of Creating Beautiful Pieces of ART Using The Most Popular Watercolour Techniques and Take Your Art Career to the Next Level",
+        desc_small:"Master watercolour techniques to create stunning art and elevate your career",
         slug: "the-transparency-training",
         videoURL:"",
         price:"₹15,800",
@@ -173,16 +176,18 @@ const CourseData = [
                 "question": "Can I pay in installments?",
                 "answer": "Yes, please contact us on WhatsApp at 6260174231 for details about installment options."
             }
-        ]
+        ],
+        Testimonials: [],
         
     },
     {
         id: 4,
         title: "The branded Artist",
         Description: "Convert Your Passion For Teaching Art Into A Profitable Business With Clear Direction & Handholding Mentorship",
+        desc_small:"Turn your art teaching passion into a profitable business with mentorship.",
         slug: "the-branded-artist",
         videoURL:"",
-        price: "₹1,49,000/-",
+        price: "₹1,49,000",
         WhatYouWillLearn: [
             "Holistic Approach to Navigating the Art Market",
             "Tailored Curriculum for Growing Your Art Business",

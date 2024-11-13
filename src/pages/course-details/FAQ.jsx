@@ -13,7 +13,7 @@ const CourseFAQ = ({faqs}) => {
   return (
     <div className="ml-8 mt-16 mb-20">
       <h2 className="font-bebasneue text-5xl border-t-2 border-[#f8b31d] pt-2 w-min">Frequently</h2>
-      <h2 className='font-cursive text-6xl text-[#f8b31d] font-bold'>Asked</h2>
+      <h2 className='font-cursive text-6xl text-[#f8b31d]'>Asked</h2>
       <div className="mt-2">
         {faqs.map((faq, index) => (
           <FAQItem

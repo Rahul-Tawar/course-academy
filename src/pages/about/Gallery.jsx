@@ -37,21 +37,27 @@ export default function Gallery() {
   ];
 
   return (
-    <div className="w-full max-w-5xl mx-auto relative pb-8">
-      <div className="text-2xl ml-8 pb-8 font-bold">
+    <div className="w-full relative pb-12 px-4 md:px-12">
+      {/* Header Section */}
+      <div className="text-2xl pb-8 font-bold">
         <h1 className="inline font-cursive text-4xl">A</h1>
         <span className="text-[#f8b31d] font-bold text-5xl font-cursive pl-3">Showcase</span>
-        <h1 className="font-cursive text-4xl">of mentor excellence</h1>
+        <h1 className="font-cursive text-4xl">of Mentor Excellence</h1>
       </div>
+
+      {/* Image Gallery Section */}
       <div className="overflow-x-hidden">
-        <div className="ml-8 overflow-x-auto scroll-smooth snap-x snap-mandatory">
-          <div className="flex space-x-4">
+        <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory">
+          <div className="flex space-x-4 pb-4">
             {images.map((image, index) => (
-              <div key={index} className="flex-shrink-0 snap-center">
+              <div
+                key={index}
+                className="flex-shrink-0 snap-center shadow-lg rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out"
+              >
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full object-cover h-60 w-40"
+                  className="object-cover h-60 w-40 md:h-80 md:w-64"
                 />
               </div>
             ))}
@@ -59,31 +65,55 @@ export default function Gallery() {
         </div>
       </div>
 
-      {/* mentor icons */}
-      
-      <div className="text-2xl ml-8 mt-20">
-        <h1 className="font-bebasneue text-4xl w-min border-t-2 border-[#f8b31d] pt-2">Moments</h1>
+      {/* Moments with Icons Section */}
+      <div className="text-2xl mt-20">
+        <h1 className="font-bebasneue text-4xl w-min md:mx-0 border-t-2 border-[#f8b31d] pt-2">Moments</h1>
         <span className="text-4xl font-bebasneue">With</span>
-        <h1 className="font-cursive text-5xl text-[#f8b31d] font-bold">Icons </h1>
+        <h1 className="font-cursive text-5xl text-[#f8b31d] font-bold">Icons</h1>
       </div>
-      <div className="overflow-x-hidden pt-8">
-        <div className="ml-8 overflow-x-auto scroll-smooth snap-x snap-mandatory">
-          <div className="flex space-x-4">
+
+      {/* Moments Slider Section for Mobile */}
+      <div className="mt-12 block md:hidden">
+        <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory">
+          <div className="flex space-x-4 pb-4">
             {moments.map((moment, index) => (
-              <div key={index} className="relative flex-shrink-0 snap-center">
+              <div
+                key={index}
+                className="flex-shrink-0 snap-center overflow-hidden hover:scale-125 transition-transform duration-300 ease-in-out"
+              >
                 <img
                   src={moment.src}
                   alt={moment.alt}
-                  className="w-full object-cover h-80 w-20"
+                  className="w-[270px] h-[300px] object-cover border-b border-[#f8b31d] pb-4"
                 />
-                <div className={`absolute bottom-0 left-0 w-full font-oswald font-bold translate-y-[-40px] text-[#f8b31d] text-center`}>
-                  {moment.description}
+                <div className="bg-white py-2">
+                  <h2 className="font-oswald text-xl">{moment.description}</h2>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>  
+
+      {/* Moments Grid Section for Desktop */}
+      <div className="mt-12 hidden md:block">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-5">
+          {moments.map((moment, index) => (
+            <div key={index} className="relative">
+             <div className="">
+             <img
+                src={moment.src}
+                alt={moment.alt}
+                className="w-full object-cover h-[300px] w-[250px] border-b border-[#f8b31d] pb-4"
+              />
+              <div className="py-2">
+                <h2 className="font-oswald text-xl">{moment.description}</h2>
+              </div>
+             </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

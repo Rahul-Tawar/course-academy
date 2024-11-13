@@ -27,8 +27,8 @@ const TestimonialCard = ({ name, testimonial }) => {
   
 
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden border border-black mt-10">
-      <div className="px-8 py-4">
+    <div className="bg-white overflow-hidden border-b border-gray-600 mr-4">
+      <div className="py-4 mt-2">
         <div className="flex items-center gap-2">
         <div className="flex flex-row gap-1 border w-12 h-12 rounded-full border-black items-center justify-center text-xl">
           <h1 className="font-bebasneue">{initials(name)}</h1>
@@ -40,8 +40,9 @@ const TestimonialCard = ({ name, testimonial }) => {
         <p className="mt-4 text-gray-700 text-base">
           {testimonial}
         </p>
-      </div>
-      <div className="bottom-0 left-0 flex items-center gap-2 p-2 px-8">
+      </div> 
+      {/* Helpful section */}
+      <div className="bottom-0 left-0 flex items-center gap-2 p-2 mb-2">
         <span className="text-sm">Helpful</span>
         <ThumbsUp
           className={`w-4 h-4 cursor-pointer transition-all ${

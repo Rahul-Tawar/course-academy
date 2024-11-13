@@ -1,6 +1,9 @@
+import { Link } from 'lucide-react';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Nav = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,28 +21,22 @@ const Nav = () => {
 
   return (
     <nav className="">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
+          <div className="">
             <a href="#" className="flex items-center">
-              <img src="Logo.png" alt="Logo" className="h-15 w-16 mr-2" />
+              <img src="/Logo.png" alt="Logo" className="h-25 w-20 mr-2" />
               
             </a>
           </div>
-          <div className="hidden md:flex items-center space-x-7 flex-grow -translate-x-8 justify-center">
-            <a href="#" className="py-4 px-2 font-semibold hover:text-gray-700 transition duration-300">Home</a>
-            <a href="#" className="py-4 px-2 font-semibold hover:text-gray-700 transition duration-300">Courses</a>
-            <a href="#" className="py-4 px-2 font-semibold hover:text-gray-700 transition duration-300">About</a>
-            <a href="#" className="py-4 px-2 font-semibold hover:text-gray-700 transition duration-300">Contact</a>
-          </div>
-          <div className="md:hidden">
+          <div>
           <button
               onClick={toggleMenu}
               className={` top-4 right-2 outline-none transition-transform duration-300 ${
                 isOpen ? 'transform rotate-180' : ''
               }`}
             >
-                <svg height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                <svg height="50px" width="50px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                 viewBox="0 0 296.999 296.999" xml:space="preserve">
                   <g id="XMLID_45_">
                       <g>
@@ -77,14 +74,14 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      <div className={`fixed top-0 left-0 h-full w-[250px] bg-white shadow-lg transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} md:hidden mobile-menu z-50`}>
-          <div className='flex translate-y-40 ml-8'>
-            <div className="flex flex-col font-oswald font-bold gap-8 text-2xl translate-y-16">
+      <div className={`fixed top-0 left-0 h-full w-[70vw] md:w-[60vw] bg-white shadow-lg transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}  mobile-menu z-50`}>
+          <div className='flex translate-y-40 ml-8 md:justify-center'>
+            <div className="flex flex-col font-oswald font-bold gap-8 text-2xl translate-y-16 md:justify-center md:items-center">
               <ul >
-                <a href="#" >Home</a>
+                <a href="">Home</a>
               </ul>
              <ul>
-                <a href="#">Courses</a>
+               <a href="">Courses</a>
              </ul>
               <ul>
                 <a href="">About Us</a>
@@ -93,7 +90,7 @@ const Nav = () => {
                 <a href="#">Contact</a>
               </ul>
             </div>
-            <div className='flex flex-row gap-4 translate-y-[65vh] translate-x-[-13vh]'>
+            <div className='flex flex-row gap-4 translate-y-[65vh] md:translate-x-[-13vh] translate-x-[-10vh]'>
               <a href="https://www.instagram.com/reyanshh_rahul/" target='_blank'><img src="/icons/instagram.png" alt="" className='h-7 w-7'/></a>
               <a href="https://www.youtube.com/channel/UC7YPCJZWCGuvcmBakFlOkbg" target='_blank'><img src="/icons/youtube.png" alt="" className='h-7 w-7'/></a>
               <a href="https://www.facebook.com/ArtistReyanshhRahul/" target='_blank'><img src="/icons/facebook.png" alt="" className='h-7 w-8' /></a>

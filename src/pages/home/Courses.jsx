@@ -100,7 +100,7 @@ const Courses = () => {
       </div>
       {/* Slider section start */}
       <div className=''>
-      <div className='flex justify-center items-center h-[370px] md:w-[100%] overflow:clip relative mt-10 w-[80vw]'>
+      <div className='flex justify-center items-center h-[370px] md:w-[100%] overflow:clip relative mt-10 w-[99vw]'>
             <ChevronLeft onClick={handlePrev} className='absolute left-[50px] top-[40%] z-10 text-[#f8b31d] w-12 h-12 hover:scale-125'/>
             <div className='flex justify-center items-center mt-8 w-full h-[500px]'>
               {CoursesData.map((course) => (
@@ -131,7 +131,7 @@ function CourseCard({ course, className }) {
       <h1 className='md:text-[25px] text-[16px] text-center font-Calibri font-bold pt-4'>{course.title}</h1>
       <p className='md:text-[15px] text-[13px] text-center font-calibri'>{course.description}</p>
       <button
-        className='text-[15px] text-center font-calibri bg-[#f8b31d] w-full rounded-lg h-10 mt-8'
+        className='text-[15px] text-center font-calibri bg-[#f8b31d] w-full rounded-lg h-10 mt-8 border-2 border-black'
         onClick={navigateToDetails}
       >
         Enroll Now
