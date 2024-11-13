@@ -17,13 +17,13 @@ A visually engaging, responsive **Drawing Academy** website designed to sell art
 ## 📸 Screenshots
 
 1. **Landing Page**
-   ![Landing Page](screenshots/lander.png)
+   ![Landing Page](public/screenshots/lander.png)
 
 2. **Course Listings**
-   ![Course Listings](screenshots/courses.png)
+   ![Course Listings](public/screenshots/courses.png)
 
 3. **Login**
-   ![Login](screenshots/newsletter.png)
+   ![Login](public/screenshots/newsletter.png)
 
 ## 📥 Installation
 
