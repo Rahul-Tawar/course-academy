@@ -12,7 +12,6 @@ import TestimonialsCardList from './TestimonialsCardList';
 import Contact from '../../components/Contact';
 import StickyCard from './StickyCard';
 import NewsLetter from '../../components/NewsLetter';
-import Login from '../../components/Login';
 
 const CourseDetails = () => {
     const { courseName } = useParams();
