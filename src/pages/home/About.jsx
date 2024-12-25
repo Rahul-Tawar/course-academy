@@ -18,10 +18,10 @@ const About = () => {
 
       <div className='pt-4 text-2xl pl-8'>
         <h1 className='font-platypi font-bold'>We Teach</h1>
-        <h1 className='font-cursive text-6xl text-[#f8b31d] font-bold pt-3'>Aspiring Artists</h1>
-        <p className='pt-6 text-lg text-gray-600 pr-8'>At Reyansh Rahul Art Academy, our mission is to inspire creativity and nurture artistic talent. We offer a vibrant platform where aspiring artists can hone their skills and explore diverse art forms.
+        <h1 className='font-cursive text-6xl text-[#f8b31d] font-bold pt-3'>Aspiring Programmers</h1>
+        <p className='pt-6 text-lg text-gray-600 pr-8'>At Programming Academy, our mission is to ignite innovation and nurture technical talent. We provide a dynamic platform where aspiring programmers can enhance their skills and explore diverse programming languages and technologies.
         </p>
-        <p className=' text-lg text-gray-600 pr-8'>With expert mentorship and innovative programs, we empower artists at every level to reach their full potential and excel in the creative industry.
+        <p className=' text-lg text-gray-600 pr-8'>With expert mentorship and cutting-edge programs, we empower developers at every level to reach their full potential and excel in the ever-evolving tech industry.
         </p>
       </div>
 
