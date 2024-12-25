@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 3000)
+    }, 2000)
 
     return () => clearTimeout(timer)
   }, [])
@@ -21,7 +21,7 @@ function App() {
     <>
     { loading ? (
       <div>
-        Loading...
+        <h1 className='text-6xl font-oswald flex justify-center items-center border-2 border-black h-[100vh]'>This is a pure work of fiction. Any resemblance to real-world characters is purely coincidental.</h1>
       </div>
     ): (
       <BrowserRouter>
